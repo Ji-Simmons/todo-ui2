@@ -70,7 +70,7 @@ export default class TaskList extends React.Component {
         // When not live:
         // fetch(`http://localhost:5555/api/tasks/${taskId}`, fetchOptions)
         // When live:
-        fetch(`https://api-todo-ji.herokuapp.com/${taskId}`, fetchOptions)
+        fetch(`https://api-todo-ji.herokuapp.com/api/tasks/${taskId}`, fetchOptions)
         .then((response) => { return response.json()})
         .then((data) =>
         {

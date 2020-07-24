@@ -23,7 +23,7 @@ class App extends React.Component {
 		// When not live:
 		// return await fetch('http://localhost:5555/api/tasks')
 		// When live:
-		return await fetch('https://api-todo-ji.herokuapp.com/')
+		return await fetch('https://api-todo-ji.herokuapp.com/api/tasks')
 			.then((response) => {
 				return response.json();
 			})
@@ -48,7 +48,7 @@ class App extends React.Component {
 		// When not live:
 		// fetch('http://localhost:5555/api/lists')
 		// When live:
-		fetch('https://api-todo-ji.herokuapp.com/')
+		fetch('https://api-todo-ji.herokuapp.com/api/lists')
 			.then((response) => {
 				return response.json();
 			})
@@ -105,7 +105,7 @@ class App extends React.Component {
 		// When not live:
 		// fetch(`http://localhost:5555/api/lists/${id}`, fetchOptions)
 		// When live:
-		fetch(`https://api-todo-ji.herokuapp.com/${id}`, fetchOptions)
+		fetch(`https://api-todo-ji.herokuapp.com/api/lists/${id}`, fetchOptions)
 			.then((response) => {
 				return response.json();
 			})
