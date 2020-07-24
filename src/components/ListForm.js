@@ -23,7 +23,7 @@ export default class ListForm extends React.Component {
 		// When it's not live:
 		// let route = 'http://localhost:5555/api/lists';
 		// When it is live:
-		let route = 'https://todo-api-ji.herokuapp.com/';
+		let route = 'https://api-todo-ji.herokuapp.com/';
 		// we need the _id in state to make stuff work but we don't actually want to submit it
 		let submitData = { ...this.state };
 		delete submitData._id;
