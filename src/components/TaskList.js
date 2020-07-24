@@ -67,7 +67,10 @@ export default class TaskList extends React.Component {
             },
             body: JSON.stringify({status: task.status === 'complete' ? 'pending' : 'complete' })
         }
-        fetch(`http://localhost:5555/api/tasks/${taskId}`, fetchOptions)
+        // When not live:
+        // fetch(`http://localhost:5555/api/tasks/${taskId}`, fetchOptions)
+        // When live:
+        fetch(`https://todo-api-ji.herokuapp.com/${taskId}`, fetchOptions)
         .then((response) => { return response.json()})
         .then((data) =>
         {

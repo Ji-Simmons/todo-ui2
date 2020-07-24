@@ -20,8 +20,10 @@ export default class ListForm extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		console.log('first state: ', this.state);
-		// and some other stuff
-		let route = 'http://localhost:5555/api/lists';
+		// When it's not live:
+		// let route = 'http://localhost:5555/api/lists';
+		// When it is live:
+		let route = 'https://todo-api-ji.herokuapp.com/';
 		// we need the _id in state to make stuff work but we don't actually want to submit it
 		let submitData = { ...this.state };
 		delete submitData._id;

@@ -25,8 +25,10 @@ export default class TaskForm extends React.Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-        // and some other stuff
-        let route = `http://localhost:5555/api/tasks`;
+        // When not live:
+		// let route = `http://localhost:5555/api/tasks`;
+		// When live:
+		let route = `https://todo-api-ji.herokuapp.com/`;
         let options = {
             method: 'POST',
             headers: {

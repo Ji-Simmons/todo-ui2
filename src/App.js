@@ -20,7 +20,10 @@ class App extends React.Component {
 	}
 
 	getTasks = async () => {
-		return await fetch('http://localhost:5555/api/tasks')
+		// When not live:
+		// return await fetch('http://localhost:5555/api/tasks')
+		// When live:
+		return await fetch('https://todo-api-ji.herokuapp.com/')
 			.then((response) => {
 				return response.json();
 			})
@@ -42,7 +45,10 @@ class App extends React.Component {
 	};
 
 	getLists = () => {
-		fetch('http://localhost:5555/api/lists')
+		// When not live:
+		// fetch('http://localhost:5555/api/lists')
+		// When live:
+		fetch('https://todo-api-ji.herokuapp.com/')
 			.then((response) => {
 				return response.json();
 			})
@@ -96,7 +102,10 @@ class App extends React.Component {
 		let fetchOptions = {
 			method: 'DELETE'
 		};
-		fetch(`http://localhost:5555/api/lists/${id}`, fetchOptions)
+		// When not live:
+		// fetch(`http://localhost:5555/api/lists/${id}`, fetchOptions)
+		// When live:
+		fetch(`https://todo-api-ji.herokuapp.com/${id}`, fetchOptions)
 			.then((response) => {
 				return response.json();
 			})
