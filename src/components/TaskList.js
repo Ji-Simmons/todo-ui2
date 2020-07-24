@@ -41,7 +41,7 @@ export default class TaskList extends React.Component {
                 taskElements: this.state.tasks.map((task) =>
                 {
                     return (
-                    <li key={uuid()}><span>{task.name}</span> - <span>{task.due}</span>{this.statusBox(task)}</li>
+                    <li key={uuid()}><span>{task.name}</span> - <span>{task.description}</span><span>{task.due}</span>{this.statusBox(task)}</li>
                     )
                 })
             }, function()
